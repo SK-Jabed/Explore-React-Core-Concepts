@@ -4,9 +4,9 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1> 
-      <Person></Person>    
-      <Person></Person>    
+      <Person></Person>        
       <Student></Student>   
+      <Developer></Developer>   
     </>
   )
 }
@@ -26,7 +26,7 @@ function Student() {
   const money = 500;
   const person = {name: "Sheikh Jabed", profession: "student"};
   return (
-    <div>
+    <div className='student'>
       <h2>I am a Student</h2>
       <p>Name: {person.name}</p>    
       <p>Age: {age}</p>    
@@ -34,5 +34,22 @@ function Student() {
     </div>
   )
 }
+
+
+function Developer() {
+  const developerStyle = {
+    margin: "20px",
+    padding: "20px",
+    border: "2px solid blue",
+    borderRadius: "16px"
+  }
+  return (
+    <div style={developerStyle}>
+      <h4>Web Developer</h4>
+      <p>Coding</p>
+    </div>
+  )
+}
+
 
 export default App
