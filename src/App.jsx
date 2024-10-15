@@ -4,11 +4,22 @@ function App() {
   return (
     <>
       <h1>Vite + React</h1> 
+      <Device name="Laptop" price="70000"></Device>
+      <Device name="Mobile" price="27000"></Device>
+      <Device name="Computer" price="30000"></Device>
       <Person></Person>        
-      <Student></Student>   
+      <Student grade="4" score="80"></Student>   
+      <Student grade="3" score="60"></Student>   
+      <Student grade="7" score="100"></Student>   
       <Developer></Developer>   
     </>
   )
+}
+
+
+function Device(props) {
+  // console.log(props);
+  return <h2>Device Name: {props.name}, Price: {props.price}</h2>
 }
 
 
@@ -20,8 +31,12 @@ function Person() {
 
 }
 
+// Destructuring 
+const {grade, score} = {grade: "7", score: "99"}
 
-function Student() {
+
+function Student(props) {
+  console.log(props);
   const age = 19;
   const money = 500;
   const person = {name: "Sheikh Jabed", profession: "student"};
