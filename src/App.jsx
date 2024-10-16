@@ -1,12 +1,30 @@
 import './App.css'
 import Todo from './Todo';
+import Actor from './Actor';
+import Player from './Player';
 
 
 function App() {
+  const actors = ["SRK", "Salman", "Amir", "Akshay"]
+  const players = [
+    {name: "Messi", age: "37"},
+    {name: "CR7", age: "39"},
+    {name: "Neymar", age: "32"}
+  ]
   return (
     <>
       <h2>Vite + React</h2> 
-      <Todo 
+      
+      {
+        players.map(player => <Player player={player}></Player>)
+      }
+      
+      
+      <Actor name={"Srk"}></Actor>
+      {
+        actors.map(actor => <Actor name={actor}></Actor>)
+      }
+      {/* <Todo 
         task="Learn React" 
         isDone={true}></Todo>
       <Todo 
@@ -14,7 +32,7 @@ function App() {
         isDone={false}></Todo>
       <Todo 
         task="Try JSX" 
-        isDone={true}></Todo>
+        isDone={true}></Todo> */}
       {/* <Device name="Laptop" price="70000"></Device>
       <Device name="Mobile" price="27000"></Device>
       <Device name="Computer" price="30000"></Device>
