@@ -2,10 +2,19 @@ import './App.css'
 import Todo from './Todo';
 import Actor from './Actor';
 import Player from './Player';
+import BookStore from './BookStore';
 
 
 function App() {
   const actors = ["SRK", "Salman", "Amir", "Akshay"]
+
+  const books = [
+    {id: 1, name: "English", price: 220},
+    {id: 2, name: "Mathematics", price: 280},
+    {id: 3, name: "Physics", price: 250},
+    {id: 4, name: "Biology", price: 300}
+  ]
+
   const players = [
     {name: "Messi", age: "37"},
     {name: "CR7", age: "39"},
@@ -15,6 +24,8 @@ function App() {
     <>
       <h2>Vite + React</h2> 
       
+      <BookStore books={books}></BookStore>
+
       {
         players.map(player => <Player player={player}></Player>)
       }
@@ -40,7 +51,7 @@ function App() {
       <Student grade="4" score="80"></Student>   
       <Student grade={3} score="60"></Student>   
       <Student></Student>   
-      <Developer></Developer>    */}
+      <Developer></Developer> */}
     </>
   )
 }
